@@ -87,7 +87,7 @@ def read_pdf(file_name):
   return all_text 
 
 def read_txt(file_name):
-  data_path = f"paper/{file_name}"
+  data_path = f"documents/{file_name}"
   with open(data_path, 'r') as file:
     all_text = file.read()
     return all_text 
