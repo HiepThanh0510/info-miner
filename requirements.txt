@@ -1,0 +1,4 @@
+transformers[torch] 
+PyPDF2
+arxiv
+ast 
