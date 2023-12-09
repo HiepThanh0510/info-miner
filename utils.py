@@ -6,6 +6,7 @@ import pandas as pd
 import ast 
 import numpy as np 
 import PyPDF2
+import os 
 
 def cos_sim(a, b):
   similarity = (a @ b.T) / (norm(a) * norm(b))
@@ -71,7 +72,7 @@ def load_many_csv(list_name):
 
 
 def read_pdf(file_name):
-  file_path = f"paper/{file_name}.pdf"
+  file_path = f"documents/{file_name}"
   pdf_file = open(file_path, "rb")
   reader = PyPDF2.PdfReader(pdf_file)
   all_text = ""
@@ -86,7 +87,10 @@ def read_pdf(file_name):
   return all_text 
 
 def read_txt(file_name):
-  pass 
+  data_path = f"paper/{file_name}"
+  with open(data_path, 'r') as file:
+    all_text = file.read()
+    return all_text 
 
 
 def document2vector(model, all_text):
@@ -102,3 +106,10 @@ def document2vector(model, all_text):
     mean_vector = np.mean(sub_vectors, axis=0)
     
     return mean_vector 
+
+#-------------------------------------#
+# implement get_file_format function  #
+#-------------------------------------#
+def get_file_format(file_path):
+    _, file_extension = os.path.splitext(file_path)
+    return file_extension.lower()
