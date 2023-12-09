@@ -40,7 +40,7 @@ pip install -r requirements.txt
     ```json
         {
             "titles": "Series2Vec: Similarity-based Self-supervised Representation Learning for Time Series Classification",
-            "summaries": "We argue that time series analysis is fundamentally different in nature to
+            "summaries": """We argue that time series analysis is fundamentally different in nature to
             either vision or natural language processing with respect to the forms of
             meaningful self-supervised learning tasks that can be defined. Motivated by
             this insight, we introduce a novel approach called \textit{Series2Vec} for
@@ -61,7 +61,7 @@ pip install -r requirements.txt
             supervised training and offers high efficiency in datasets with limited-labeled
             data. Finally, we show that the fusion of Series2Vec with other representation
             learning models leads to enhanced performance for time series classification.
-            Code and models are open-source at \url{https://github.com/Navidfoumani/Series2Vec.}",
+            Code and models are open-source at \url{https://github.com/Navidfoumani/Series2Vec.}""",
             "terms": "['cs.LG']"
         }
     ```
