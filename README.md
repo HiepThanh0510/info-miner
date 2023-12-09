@@ -37,7 +37,7 @@ pip install -r requirements.txt
     <details>
         <summary>Data format</summary>
 
-    ```json
+    ```
         {
             "titles": "Series2Vec: Similarity-based Self-supervised Representation Learning for Time Series Classification",
             "summaries": """We argue that time series analysis is fundamentally different in nature to
