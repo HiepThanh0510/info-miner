@@ -108,7 +108,7 @@ Please review the file [app.py](app.py) for insights into the query process.
      <details>
         <summary>Queries result</summary>
 
-    ```json
+    ```
         Top 1:
             Titile:  Beyond Pixels: A Comprehensive Survey from Bottom-up to Semantic Image Segmentation and Cosegmentation
             Abstract: Image segmentation refers to the process to divide an image into
@@ -168,7 +168,7 @@ Please review the file [app.py](app.py) for insights into the query process.
     <details>
         <summary>Queries result</summary>
 
-    ```json
+    ```
         get pdf file format
         Top 1:
             Titile:  Spatially Adaptive Computation Time for Residual Networks
@@ -264,7 +264,7 @@ Please review the file [app.py](app.py) for insights into the query process.
      <details>
         <summary>Queries result</summary>
 
-    ```json
+    ```
         get txt file format
         Top 1:
             Titile:  Learning Robust and Consistent Time Series Representations: A Dilated Inception-Based Approach
