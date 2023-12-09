@@ -58,7 +58,13 @@ if args.prompt != "no-prompt":
 # for task: extract information from document, then query relevant papers #
 #-------------------------------------------------------------------------#
 elif args.document_path != "no-document_path":
-    all_text = utils.read_pdf(args.document_path)
+    file_format = utils.get_file_format(args.document_path)
+    if file_format == ".pdf":
+        print("get pdf file format")
+        all_text = utils.read_pdf(args.document_path)
+    elif file_format == '.txt':
+        print("get txt file format")
+        all_text = utils.read_txt(args.document_path)
     vector_retrieval = utils.document2vector(model=model,
                                              all_text=all_text)
 
@@ -73,7 +79,8 @@ k = int(args.num_queries)
 top_k = list_score_sort[:k]
 top_k_index = [i[0] for i in top_k]
 
-for i in top_k_index:
-    print(data_json[i]['summaries'])
-    print('titile: ', data_json[i]['titles'])
+for loop_i, i in enumerate(top_k_index):
+    print(f"Top {loop_i+1}:")
+    print('   Titile: ', data_json[i]['titles'])
+    print('   Abstract:', data_json[i]['summaries'])
     print('\n')

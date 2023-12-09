@@ -17,7 +17,7 @@ parser.add_argument("--max_results",
 
 args = parser.parse_args()
 max_results = int(args.max_results)
-print(args.query_keyword)
+
 if "|" in args.query_keyword:
     keywords = args.query_keyword.split('|')
     query_keywords = []
@@ -46,7 +46,6 @@ def query_with_keywords(query):
             abstracts.append(res.summary)
     return terms, titles, abstracts
 
-
 all_titles = []
 all_summaries = []
 all_terms = []
@@ -56,8 +55,7 @@ for query in query_keywords:
     all_titles.extend(titles)
     all_summaries.extend(abstracts)
     all_terms.extend(terms)
-    
-    
+        
 data = pd.DataFrame({
     'titles': all_titles,
     'summaries': all_summaries,
